@@ -19,6 +19,7 @@ const nextConfig: NextConfig = {
     resolveAlias: {
       "@mediapipe/hands": "./src/stubs/mediapipe-hands.ts",
       "@mediapipe/face_mesh": "./src/stubs/mediapipe-face-mesh.ts",
+      "@mediapipe/pose": "./src/stubs/mediapipe-pose.ts",
     },
   },
   webpack: (config) => {
@@ -26,6 +27,7 @@ const nextConfig: NextConfig = {
       ...config.resolve.alias,
       "@mediapipe/hands": path.resolve(__dirname, "src/stubs/mediapipe-hands.ts"),
       "@mediapipe/face_mesh": path.resolve(__dirname, "src/stubs/mediapipe-face-mesh.ts"),
+      "@mediapipe/pose": path.resolve(__dirname, "src/stubs/mediapipe-pose.ts"),
     };
     return config;
   },
